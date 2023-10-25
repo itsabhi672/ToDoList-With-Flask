@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.datetime{
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display:flex;
+    justify-content:center;
+    padding-top:30px;
+}
+.datetime h1{
+    color:#fff
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.to-do-app{
+    width: 100%;
+    max-width: 580px;
+    background-color: #fff;
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    
+}
+.to-do-app h1{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.to-do-app h1 img{
+    height: 60px;
+    margin-left: 10px;
+}
+.row{
+
+    background-color: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 30px;
+    font-weight: 18px;
+    font-size: 20px;
+    
+}
+.button{
+    background-color: #ff5945;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 26px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+ul li{
+    list-style: none;
+    position: relative;
+    user-select: none;
+    padding: 6px 8px 6px 30px;
+}
+ul li input{
+    margin-right: 5px;
+    border-radius:50%;
+}
+
+button{
+    outline: none;
+    border: none;
+    padding: 5px 12px;
+    right: inherit;
+    font-size: 20px;
+    float: right;
+}
+
+.delete{
+    float: right;
+}
+
+ul li span{
+    font-size:20px;
+}

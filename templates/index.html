@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="datetime">
+        <h1>
+           {{ datetime }}
+        </h1>
+    </div>
+    <div class="container">
+        <div class="to-do-app">
+            <h1>ToDo List <img src="{{ url_for('static', filename='images/icon.png') }}"></h1>
+            <div class="row">
+                <form method="POST" action="{{ url_for('add') }}">
+                    <input type="text" name="task" id="input-task" placeholder="Add your Task">
+                    <button class="button">Add</button>
+                </form>
+            </div>
+            <ul class="list" id="list-container">
+                {% for todo in todos %}
+                    <li>
+                        <input type="checkbox" disabled {% if todo['done'] %} checked {% endif %}
+                        onchange='this.form.sumbit()'>
+                        <span {% if todo['done'] %} style='text-decoration:line-through' {% endif %}>
+                        {{  todo['task']  }}</span>
+                        <a href="{{ url_for('check', index=loop.index0) }}">✔</a>
+                        <a class="delete" href="{{ url_for('delete', index=loop.index0) }}">X</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
